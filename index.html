@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leapfrogging the Legacy Gap: Complete Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lush-green': '#008753',
+                        'lush-purple': '#8B5CF6',
+                        'lush-purple-dark': '#7C3AED',
+                        'pop-yellow': '#FCD34D',
+                        'pop-red': '#EF4444',
+                        'paper': '#ffffff',
+                        'ink': '#1f2937',
+                        'cream': '#FDFBF7'
+                    },
+                    fontFamily: {
+                        'display': ['Outfit', 'sans-serif'],
+                        'body': ['Space Grotesk', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'pop-green': '8px 8px 0px 0px #008753',
+                        'pop-purple': '8px 8px 0px 0px #8B5CF6',
+                        'pop-ink': '8px 8px 0px 0px #1f2937',
+                        'pop-hover': '4px 4px 0px 0px #1f2937',
+                        'inner-sharp': 'inset 2px 2px 0px 0px rgba(0,0,0,0.1)'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #1f2937;
+            overflow-x: hidden;
+            background-image: radial-gradient(#008753 0.5px, transparent 0.5px), radial-gradient(#8B5CF6 0.5px, #FDFBF7 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        /* Organic Shapes */
+        .blob { position: absolute; filter: blur(40px); z-index: -1; opacity: 0.6; }
+        
+        /* Card Styles */
+        .paper-board {
+            background: white;
+            border: 3px solid #1f2937;
+            border-radius: 1rem;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+        }
+        .paper-board:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px 0px rgba(31, 41, 55, 0.2);
+        }
+
+        /* The Spine Connector */
+        .spine-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background-color: #1f2937;
+            transform: translateX(-50%);
+            z-index: 0;
+            background-image: repeating-linear-gradient(45deg, #1f2937 0, #1f2937 10px, #374151 10px, #374151 20px);
+        }
+        .connector-dot {
+            width: 24px;
+            height: 24px;
+            background: #ffffff;
+            border: 4px solid #1f2937;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        /* Interactive Tabs */
+        .tab-btn { transition: all 0.2s; }
+        .tab-btn.active {
+            background-color: #008753;
+            color: white;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px 0px #1f2937;
+        }
+
+        .chart-container { position: relative; height: 300px; width: 100%; }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            border: 2px solid #1f2937;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-lush-purple selection:text-white pb-20">
+
+    <!-- Blobs -->
+    <div class="blob bg-green-300 w-96 h-96 rounded-full top-0 left-0 mix-blend-multiply animate-float"></div>
+    <div class="blob bg-purple-300 w-96 h-96 rounded-full bottom-0 right-0 mix-blend-multiply animate-float" style="animation-delay: 2s"></div>
+
+    <!-- Header -->
+    <header class="pt-20 pb-12 px-4 container mx-auto text-center relative z-10">
+        <div class="inline-block bg-lush-purple text-white border-2 border-ink px-4 py-1 rounded-full font-bold mb-4 shadow-pop-green transform -rotate-2">
+            Nigeria Education Strategy 2030
+        </div>
+        <h1 class="font-display text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+            Leapfrogging the <br>
+            <span class="text-lush-green underline decoration-wavy decoration-4 underline-offset-8">Legacy Gap</span>
+        </h1>
+        <p class="text-xl text-gray-700 max-w-2xl mx-auto font-medium">
+            A comprehensive data report on restructuring K-12 education through AI and Digital Transformation.
+        </p>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-6xl space-y-24">
+
+        <!-- SECTION 1: THE CRISIS (Reintegrated Data) -->
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="font-display text-4xl font-bold inline-block bg-white px-6 py-2 border-2 border-ink shadow-pop-ink rounded-full">
+                    The Current Reality 🚨
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <!-- Teacher Ratio Card -->
+                <div class="paper-board p-8 shadow-pop-purple flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-500 uppercase text-sm mb-2">Human Capital Crisis</h3>
+                        <h4 class="font-display text-3xl font-bold text-ink mb-4">Teacher Availability</h4>
+                        <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6 text-center">
+                            <span class="block text-6xl font-extrabold text-pop-red mb-2">65:1</span>
+                            <span class="font-bold text-gray-700">Student-to-Qualified-Teacher Ratio</span>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600 font-medium border-l-4 border-lush-purple pl-4">
+                        <strong>Insight:</strong> Personalized learning is physically impossible at this ratio. AI Tutors are not a luxury; they are a necessity to scale attention.
+                    </p>
+                </div>
+
+                <!-- Digital Divide Card -->
+                <div class="paper-board p-8 shadow-pop-green flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-gray-500 uppercase text-sm mb-2">Infrastructure Crisis</h3>
+                        <h4 class="font-display text-3xl font-bold text-ink mb-4">The Digital Divide</h4>
+                        <div class="h-40 chart-container">
+                            <canvas id="divideChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-4 bg-gray-100 p-3 rounded-lg border border-gray-300">
+                        <span class="font-bold text-sm">Broadband Access</span>
+                        <span class="font-display text-xl font-bold text-ink">~10%</span>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600 font-medium border-l-4 border-lush-green pl-4">
+                        <strong>Insight:</strong> 90% of students are offline. Solutions must be "Offline-First" (Edge AI).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: THE INFRASTRUCTURE SPINE (Visual Anchor) -->
+        <section class="relative">
+            <div class="text-center mb-16 relative z-10">
+                <h2 class="font-display text-4xl font-bold bg-white inline-block px-8 py-3 border-2 border-ink shadow-pop-ink rounded-full">
+                    The Infrastructure Spine ⚡
+                </h2>
+                <p class="mt-4 text-gray-600 font-bold max-w-lg mx-auto bg-white/80 p-2 rounded">
+                    The 3-Layer physical foundation required to support the AI strategy.
+                </p>
+            </div>
+
+            <div class="relative py-10">
+                <div class="hidden md:block spine-line"></div>
+
+                <!-- Layer 1: POWER -->
+                <div class="flex flex-col md:flex-row items-center justify-between mb-16 relative z-10 group">
+                    <div class="w-full md:w-5/12 mb-6 md:mb-0 text-right pr-0 md:pr-10">
+                        <div class="paper-board p-4 bg-red-50 border-red-300 inline-block text-left">
+                            <h3 class="font-bold text-red-800">The Cost Barrier</h3>
+                            <p class="text-2xl font-display font-extrabold text-ink">₦300k<span class="text-sm font-normal text-gray-600">/mo Diesel OPEX</span></p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block connector-dot bg-yellow-400"></div>
+                    <div class="w-full md:w-5/12 pl-0 md:pl-10">
+                        <div class="paper-board p-6 shadow-pop-green bg-white">
+                            <div class="absolute -top-3 -right-3 badge bg-lush-green text-white">Layer 1</div>
+                            <h3 class="font-bold text-lush-green text-xl mb-2">Solar Hybrid Systems</h3>
+                            <p class="text-sm text-gray-600">5kVA Inverter + Lithium Batteries. Pays for itself in 14 months vs Diesel.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2: DATA -->
+                <div class="flex flex-col md:flex-row items-center justify-between mb-16 relative z-10 group">
+                    <div class="w-full md:w-5/12 mb-6 md:mb-0 text-right pr-0 md:pr-10">
+                        <div class="paper-board p-4 bg-gray-50 border-gray-300 inline-block text-left">
+                            <h3 class="font-bold text-gray-700">The Data Barrier</h3>
+                            <p class="text-2xl font-display font-extrabold text-ink">₦150k<span class="text-sm font-normal text-gray-600">/mo Bandwidth</span></p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block connector-dot bg-lush-purple"></div>
+                    <div class="w-full md:w-5/12 pl-0 md:pl-10">
+                        <div class="paper-board p-6 shadow-pop-purple bg-white">
+                            <div class="absolute -top-3 -right-3 badge bg-lush-purple text-white">Layer 2</div>
+                            <h3 class="font-bold text-lush-purple text-xl mb-2">Edge Servers (Offline AI)</h3>
+                            <p class="text-sm text-gray-600">Local Raspberry Pi servers hosting LLMs and content. Zero ongoing data cost.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 3: HARDWARE -->
+                <div class="flex flex-col md:flex-row items-center justify-between relative z-10 group">
+                    <div class="w-full md:w-5/12 mb-6 md:mb-0 text-right pr-0 md:pr-10">
+                        <div class="paper-board p-4 bg-yellow-50 border-yellow-300 inline-block text-left">
+                            <h3 class="font-bold text-yellow-800">The Device Gap</h3>
+                            <p class="text-2xl font-display font-extrabold text-ink">1:50<span class="text-sm font-normal text-gray-600"> Device Ratio</span></p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block connector-dot bg-ink"></div>
+                    <div class="w-full md:w-5/12 pl-0 md:pl-10">
+                        <div class="paper-board p-6 shadow-pop-ink bg-white">
+                            <div class="absolute -top-3 -right-3 badge bg-ink text-white">Layer 3</div>
+                            <h3 class="font-bold text-ink text-xl mb-2">Hub & Spoke Model</h3>
+                            <p class="text-sm text-gray-600">Shared Computer Labs per cluster + Low-cost rugged tablets. Target Ratio 1:3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: AI INTEGRATION & FOCUS (New) -->
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="font-display text-4xl font-bold text-ink mb-2">AI Implementation Strategy</h2>
+                <p class="text-lush-purple font-bold">Where do we deploy the technology?</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Implementation Focus Chart -->
+                <div class="paper-board p-8 shadow-pop-green">
+                    <h3 class="font-bold text-xl mb-4 text-center">Resource Allocation Focus</h3>
+                    <div class="chart-container">
+                        <canvas id="focusChart"></canvas>
+                    </div>
+                    <p class="text-center text-xs text-gray-500 mt-4">Majority of AI resources target direct student support.</p>
+                </div>
+
+                <!-- Integration Points -->
+                <div class="paper-board p-8 shadow-pop-purple flex flex-col justify-center">
+                    <h3 class="font-bold text-xl mb-6">Key Integration Points</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start bg-purple-50 p-4 rounded-xl border border-purple-200">
+                            <span class="text-3xl mr-4">🎓</span>
+                            <div>
+                                <h4 class="font-bold text-lush-purple">Personalized AI Tutors</h4>
+                                <p class="text-sm text-gray-600">Adaptive learning algorithms that provide 1-on-1 feedback in Math & Literacy, bridging the teacher gap.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start bg-green-50 p-4 rounded-xl border border-green-200">
+                            <span class="text-3xl mr-4">📋</span>
+                            <div>
+                                <h4 class="font-bold text-lush-green">Admin Automation</h4>
+                                <p class="text-sm text-gray-600">AI tools for grading, attendance, and report generation, saving teachers 15 hours/week.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start bg-gray-50 p-4 rounded-xl border border-gray-200">
+                            <span class="text-3xl mr-4">📊</span>
+                            <div>
+                                <h4 class="font-bold text-ink">Predictive Analytics</h4>
+                                <p class="text-sm text-gray-600">Early warning systems to identify students at risk of dropping out based on performance patterns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CURRICULUM (Condensed) -->
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="font-display text-4xl font-bold text-ink">The New 3-Tier Curriculum</h2>
+            </div>
+            <div class="paper-board shadow-pop-ink overflow-hidden">
+                <div class="flex flex-wrap border-b-2 border-ink bg-gray-50">
+                    <button onclick="openTab('p1')" id="tab-p1" class="tab-btn flex-1 py-4 font-bold active">Phase 1: Foundation</button>
+                    <button onclick="openTab('p2')" id="tab-p2" class="tab-btn flex-1 py-4 font-bold">Phase 2: Transition</button>
+                    <button onclick="openTab('p3')" id="tab-p3" class="tab-btn flex-1 py-4 font-bold">Phase 3: Specialize</button>
+                </div>
+                <div class="p-8 min-h-[250px] bg-white">
+                    <div id="p1" class="tab-content block animate-fade-in">
+                        <h3 class="text-xl font-bold text-lush-green mb-2">Pre-K to Primary 3: Logic & Unplugged</h3>
+                        <p>Robot Roleplay, Data Tallying, Pattern Recognition. No screens required.</p>
+                    </div>
+                    <div id="p2" class="tab-content hidden animate-fade-in">
+                        <h3 class="text-xl font-bold text-lush-purple mb-2">Primary 4 to JSS 1: Digital Fluency</h3>
+                        <p>Scratch (Block Coding), Teachable Machine (AI Ethics), Basic Hardware interaction.</p>
+                    </div>
+                    <div id="p3" class="tab-content hidden animate-fade-in">
+                        <h3 class="text-xl font-bold text-ink mb-2">JSS 2 to SSS 3: Workforce Ready</h3>
+                        <p>Python, Data Science, Vocational Data Labeling (Immediate Employment Track).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: GLOBAL COMPARISON & IMPACT (New Charts) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            
+            <!-- Global AI Readiness -->
+            <div class="paper-board p-8 shadow-pop-purple">
+                <h3 class="font-bold text-xl mb-4 text-center">Global AI Readiness Score</h3>
+                <div class="chart-container">
+                    <canvas id="readinessChart"></canvas>
+                </div>
+                <p class="text-center text-xs text-gray-500 mt-4">Goal: Match South Korea's integration level by 2035.</p>
+            </div>
+
+            <!-- Workforce Impact -->
+            <div class="paper-board p-8 shadow-pop-green">
+                <h3 class="font-bold text-xl mb-4 text-center">Projected Tech Workforce Growth</h3>
+                <div class="chart-container">
+                    <canvas id="growthChart"></canvas>
+                </div>
+                <p class="text-center text-xs text-gray-500 mt-4">Creating 1.5M jobs through Curriculum Restructuring.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t-4 border-lush-green py-12 text-center mt-20">
+        <h2 class="font-display text-3xl font-bold mb-4">The Future is Now</h2>
+        <p class="text-gray-600 mb-8">Based on the report: "Leapfrogging the Legacy Gap"</p>
+    </footer>
+
+    <script>
+        // --- Tab Logic ---
+        function openTab(id) {
+            document.querySelectorAll('.tab-content').forEach(e => e.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('active', 'bg-lush-green', 'text-white', 'shadow-pop-hover');
+                b.classList.add('bg-gray-50');
+                b.style.transform = 'none';
+                b.style.boxShadow = 'none';
+            });
+            const btn = document.getElementById(`tab-${id}`);
+            btn.classList.add('active');
+            btn.style.transform = 'translate(-2px, -2px)';
+            btn.style.boxShadow = '4px 4px 0px 0px #1f2937';
+        }
+
+        // --- Charts ---
+        Chart.defaults.font.family = 'Space Grotesk';
+        Chart.defaults.color = '#1f2937';
+        const commonOptions = { responsive: true, maintainAspectRatio: false };
+
+        // 1. Digital Divide (Donut)
+        new Chart(document.getElementById('divideChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Offline (No/Slow Net)', 'Online (Broadband)'],
+                datasets: [{
+                    data: [90, 10],
+                    backgroundColor: ['#ef4444', '#008753'],
+                    borderWidth: 2, borderColor: '#1f2937'
+                }]
+            },
+            options: { ...commonOptions, plugins: { legend: { position: 'right' } } }
+        });
+
+        // 2. Focus of Implementation (Pie)
+        new Chart(document.getElementById('focusChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Student Support (Tutors)', 'Teacher Admin', 'Analytics', 'Curriculum Dev'],
+                datasets: [{
+                    data: [50, 25, 15, 10],
+                    backgroundColor: ['#8B5CF6', '#FCD34D', '#008753', '#1f2937'],
+                    borderWidth: 2, borderColor: '#1f2937'
+                }]
+            },
+            options: { ...commonOptions, plugins: { legend: { position: 'bottom' } } }
+        });
+
+        // 3. Readiness (Bar)
+        new Chart(document.getElementById('readinessChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Nigeria (Now)', 'Nigeria (Target)', 'Finland', 'S. Korea'],
+                datasets: [{
+                    label: 'Score (0-100)',
+                    data: [15, 75, 85, 92],
+                    backgroundColor: ['#ef4444', '#008753', '#FCD34D', '#8B5CF6'],
+                    borderWidth: 2, borderColor: '#1f2937', borderRadius: 6
+                }]
+            },
+            options: { ...commonOptions, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+        });
+
+        // 4. Growth (Line)
+        new Chart(document.getElementById('growthChart'), {
+            type: 'line',
+            data: {
+                labels: ['2025', '2028', '2031', '2035'],
+                datasets: [{
+                    label: 'Workforce Size',
+                    data: [80000, 450000, 900000, 1500000],
+                    borderColor: '#008753', backgroundColor: '#008753',
+                    borderWidth: 3, tension: 0.3
+                }]
+            },
+            options: { ...commonOptions, plugins: { legend: { display: false } } }
+        });
+    </script>
+</body>
+</html>
